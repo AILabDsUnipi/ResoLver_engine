@@ -216,3 +216,21 @@ Furthermore, you can control the following hyperparameters using only arguments 
 - specify if want to use the *Rate of Closure* in the reward function, argument: ```--with_RoC_term_reward=<True_or_False>```
 
 After training is finished, the trained model will be stored in a file named *gdn.h5* in the current directory. Also, a file named *episodes_log.txt* will be created in the same directory, which will contain details about the progress of training and can be used to plot the learning curves.
+
+#### Train with more than 1 scenario
+
+To train a model using samples from many scenarios, you should run the *runexp.py* file with the following arguments:
+
+- ```--multi_scenario_training=True``` instead of ```--scenario=<scenario_ID>```. 
+- ```--selected_scenarios_path=<path_to_the_file>```, where the *file* should be a .txt file containing the IDs of the selected scenarios to be used (like the 
+  *selected_scenarios_for_testing.txt*) and named *selected_scenarios.txt*.
+
+The way to control the hyperparameters is the same as in the single-scenario training.
+
+#### Sequential training
+
+You can train a model in a sequential fashion, as we did in the cases of 4Seq6 and 6Seq6 models (please read the paper for details). When a model is already trained with a batch of scenarios, you can further train it using another batch (or even the same) by running the *runexp.py* file with the following arguments:
+
+- ```--continue_train=True```
+- ```--DGN_model_path=<path_to_trained_model>``` . NOTE: The name of the trained model should be different from *gdn.h5* (such as *gdn_1.h5*).
+
