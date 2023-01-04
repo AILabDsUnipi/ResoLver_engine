@@ -184,3 +184,14 @@ When run is complete, the following files should be created in the current direc
 
 If you want to create the corresponding boxplots for the training scenarios (in case that you have train a model with other training scenarios than the one provided)
 you should use the argument ```--train=True```.
+
+### Extract details of scenarios
+
+To reproduce the results of the file *selected_scenarios_details.csv*, you should run the following command:
+
+```python extract_scenarios_details.py```
+
+where by default the file *./selected_scenarios_files/selected_scenarios_for_testing.txt* is loaded to determine the scenarios for which the details will be extracted.
+
+After run is complete, the file *scenarios_details.csv* should be created in the current directory.
+
