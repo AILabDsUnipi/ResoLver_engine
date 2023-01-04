@@ -48,7 +48,7 @@ To run the code (for testing or training), you need the followings:
    - ```conda install python=3.6```
    - ```conda create --name conda_env python=3.6```
    - ```conda activate conda_env```
-3. After having install and activate the conda environment, you should install the requirements using the following commands:
+3. After installing and activating the conda environment, you should install the requirements using the following commands:
    - ```conda install pandas=1.1.5```
    - ```conda install numba=0.50```
    - ```conda install pyproj=2.6.1.post1```
@@ -64,3 +64,17 @@ To run the code (for testing or training), you need the followings:
    - ```conda install numpy==1.19.2```
    - ```conda install psutil==5.8.0```
 
+## Real World Dataset
+
+The provided dataset is about flights operating in the airspace of Spain. 
+There are 25 scenarios in total: 
+* 24 scenarios which we have used for testing. 
+* 1 for training. Note that we do not provide the entire training dataset used to train the models.
+
+You can find the IDs of the scenarios in the file: <br />
+*./selected_scenarios_files/selected_scenarios_for_testing.txt* <br />
+where the first one has been used for training and the rest (24) for testing.
+
+Additionally, you can find the details of these 25 scenarios in the file: <br />
+*./selected_scenarios_files/selected_scenarios_details.csv* <br />
+which are the same as those reported in our paper. 
