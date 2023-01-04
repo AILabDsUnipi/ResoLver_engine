@@ -162,3 +162,25 @@ When run is complete, a file named *statistics_table.xlsx* should be created in 
 
 If the statistics to be summarized include *std* or *iqr*, you can use the argument ```--with_mean_median_and_std_iqr=True``` to adjust the length of the cells of the .xlsx file.
 
+#### Boxplots
+To create boxplots for macro average results (for all models), you should first save the corresponding dataframes. For this, you should run *run_multiple_tests.py* using the argument ```--save_data_for_boxplots=True``` along with ```--with_mean_and_std=True``` (and obviously with   
+```--DGN_model_path=<model_path>```). When run is complete, the following files should be created:
+
+- *./testing_scenarios/df_for_boxplots_1.pkl*
+- *./testing_scenarios/df_for_boxplots_ATC_instructions.pkl*
+- *./testing_scenarios/df_for_boxplots_conflict_in_groups_resolution_duration.pkl*
+- *./testing_scenarios/df_for_boxplots_add_NMs.pkl*
+- *./testing_scenarios/df_for_boxplots_mean_reward.pkl*
+
+After performing this step for each model and storing the corresponding files, you should change the paths in lines 113-142 of the file *construct_statistics_table.py* 
+(located in the folder *results_utils*) according to the locations of the stored files (30 file paths = 5 files X 6 models). Finally, you should execute the command below:
+
+```python create_boxplots.py```
+
+When run is complete, the following files should be created in the current directory:
+
+- *CR_IncrDecrConflicts_IncrDecrAlerts_test.png*
+- *RA_RAD_ANMs_RW_test.png*
+
+If you want to create the corresponding boxplots for the training scenarios (in case that you have train a model with other training scenarios than the one provided)
+you should use the argument ```--train=True```.
