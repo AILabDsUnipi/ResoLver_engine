@@ -33,6 +33,8 @@ This repository consists of:
 
 * Trained models.
 
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
+
 ## Code dependencies
 
 To run the code (for testing or training), you need the followings:
@@ -64,6 +66,8 @@ To run the code (for testing or training), you need the followings:
    - ```conda install numpy==1.19.2```
    - ```conda install psutil==5.8.0```
 
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
+
 ## Real World Dataset
 
 The provided dataset is about flights operating in the airspace of Spain. 
@@ -79,6 +83,8 @@ Additionally, you can find the details of these 25 scenarios in the file: <br />
 *./selected_scenarios_files/selected_scenarios_details.csv* <br />
 which are the same as those reported in our paper. 
 
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
+
 ## Trained models
 
 We provide trained parameters for all models reported in our paper. Specifically:
@@ -89,6 +95,8 @@ We provide trained parameters for all models reported in our paper. Specifically
 - model All36-DGN (ablation): *./trained_model/All36_DGN/gdn_1.h5*
 - model 6Seq6-DGN (ablation): *./trained_model/6Seq6_DGN/gdn_1.h5*
 - model 4Seq6-DGN (ablation): *./trained_model/4Seq6_DGN/gdn_1.h5*
+
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
 
 ## Use of code
 
@@ -111,6 +119,8 @@ When run is complete, the following files should be created in current directory
   subsequent timestamp, while we consider a conflict unresolved only if there is a LoS for the same pair of conflicting flights in a subsequent timestamp).
 - *./logs/resolution_actions_episode_1* which will include details about the suggested resolution actions.
 - other files in the *./logs* folder as well as the directories *./log* and *./heatmaps_by_agent* with more details.
+
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
 
 ### Multiple scenarios testing
 
@@ -150,6 +160,8 @@ When run is complete, a folder named *testing* should be created in the current 
   It should be noted again that *percentage of Conflicts Resolved* reported in the paper is computed based on the *Number of conflicts in groups solved*, 
   as well as *Resolution Action Duration* corresponds to *Conflict (in groups) resolution duration*.
   
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
+  
 #### Statistics table
 In order to summarize the statistics of the different models (after running *run_multiple_tests.py* for the 6 models), you can create a table of statistics by running
 the file *construct_statistics_table.py* located in the folder *results_utils* using the following command:
@@ -161,6 +173,8 @@ NOTE: Before running the above command, you should change the paths according to
 When run is complete, a file named *statistics_table.xlsx* should be created in the current directory. 
 
 If the statistics to be summarized include *std* or *iqr*, you can use the argument ```--with_mean_median_and_std_iqr=True``` to adjust the length of the cells of the .xlsx file.
+
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
 
 #### Boxplots
 To create boxplots for macro average results (for all models), you should first save the corresponding dataframes. For this, you should run *run_multiple_tests.py* using the argument ```--save_data_for_boxplots=True``` along with ```--with_mean_and_std=True``` (and obviously with   
@@ -185,6 +199,8 @@ When run is complete, the following files should be created in the current direc
 If you want to create the corresponding boxplots for the training scenarios (in case that you have train a model with other training scenarios than the one provided)
 you should use the argument ```--train=True```.
 
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
+
 ### Extract details of scenarios
 
 To reproduce the results of the file *selected_scenarios_details.csv*, you should run the following command:
@@ -194,6 +210,8 @@ To reproduce the results of the file *selected_scenarios_details.csv*, you shoul
 where by default the file *./selected_scenarios_files/selected_scenarios_for_testing.txt* is loaded to determine the scenarios for which the details will be extracted.
 
 After run is complete, the file *scenarios_details.csv* should be created in the current directory.
+
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
 
 ### Training
 
@@ -217,6 +235,8 @@ Furthermore, you can control the following hyperparameters using only arguments 
 
 After training is finished, the trained model will be stored in a file named *gdn.h5* in the current directory. Also, a file named *episodes_log.txt* will be created in the same directory, which will contain details about the progress of training and can be used to plot the learning curves.
 
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
+
 #### Train with more than 1 scenario
 
 To train a model using samples from many scenarios, you should run the *runexp.py* file with the following arguments:
@@ -226,6 +246,8 @@ To train a model using samples from many scenarios, you should run the *runexp.p
   *selected_scenarios_for_testing.txt*) and named *selected_scenarios.txt*.
 
 The way to control the hyperparameters is the same as in the single-scenario training.
+
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
 
 #### Sequential training
 
@@ -245,6 +267,8 @@ After training a model you can plot the learning curves by performing the follow
 - run the command ```python plot_results.py```.
 
 NOTE: The file *plot_results.py* is located in the folder *results_utils*. To run the above command you need to create a different conda environment with python version >= 3.7, numpy version >= 1.21.5, and matplotlib version >= 3.5.1 .
+
+<p align="right">(<a href="#cdr_dgn">back to top</a>)</p>
 
 ## Citation
 ``` . ```
