@@ -78,3 +78,16 @@ where the first one has been used for training and the rest (24) for testing.
 Additionally, you can find the details of these 25 scenarios in the file: <br />
 *./selected_scenarios_files/selected_scenarios_details.csv* <br />
 which are the same as those reported in our paper. 
+
+## Trained models
+
+We provide trained parameters for all models reported in our paper. Specifically:
+
+- model All36: *./trained_model/All36/gdn_1.h5*
+- model 6Seq6: *./trained_model/6Seq6/gdn_1.h5*
+- model 4Seq6: *./trained_model/4Seq6/gdn_1.h5*
+- model All36-DGN (ablation): *./trained_model/All36_DGN/gdn_1.h5*
+- model 6Seq6-DGN (ablation): *./trained_model/6Seq6_DGN/gdn_1.h5*
+- model 4Seq6-DGN (ablation): *./trained_model/4Seq6_DGN/gdn_1.h5*
+
+
