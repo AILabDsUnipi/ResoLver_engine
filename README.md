@@ -5,20 +5,20 @@ This repository constitutes the implementation (code and dataset) of our paper: 
 ## Contents
 
 * 1\. [Introduction](#introduction)
-* 2\. [Code dependencies](#code_dependencies)
-* 3\. [Real World Dataset](#real_world_dataset)
-* 4\. [Trained models](#trained_models)
-* 5\. [Use of code](#use_of_code)
-	* 5.1\. [One scenario testing](#one_scenario_testing)
- 	* 5.2\. [Multiple scenarios testing](#multiple_scenarios_testing)
-		* 5.2.1\. [Statistics table](##statistics_table)
+* 2\. [Code dependencies](#code-dependencies)
+* 3\. [Real World Dataset](#real-world-dataset)
+* 4\. [Trained models](#trained-models)
+* 5\. [Use of code](#use-of-code)
+	* 5.1\. [One scenario testing](#one-scenario-testing)
+ 	* 5.2\. [Multiple scenarios testing](#multiple-scenarios-testing)
+		* 5.2.1\. [Statistics table](##statistics-table)
 		* 5.2.2\. [Boxplots](#boxplots)
-		* 5.2.3\. [Extract details of scenarios](#extract_details_of_scenarios)
+		* 5.2.3\. [Extract details of scenarios](#extract-details-of-scenarios)
 	* 5.3\. [Training](#training)
-		* 5.3.1\. [Train with only 1 scenario](#extract_details_of_scenarios)
-  		* 5.3.2\. [Train with more than 1 scenario](#train_with_more_than_1_scenario)
-  		* 5.3.3\. [Sequential training](#sequential_training)
-		* 5.3.4\. [Plot learning curves](#plot_learning_curves)
+		* 5.3.1\. [Train with only 1 scenario](#extract-details-of-scenarios)
+  		* 5.3.2\. [Train with more than 1 scenario](#train-with-more-than-1-scenario)
+  		* 5.3.3\. [Sequential training](#sequential-training)
+		* 5.3.4\. [Plot learning curves](#plot-learning-curves)
 * 6\. [Citation](#citation)
 
 ## Introduction
@@ -90,4 +90,24 @@ We provide trained parameters for all models reported in our paper. Specifically
 - model 6Seq6-DGN (ablation): *./trained_model/6Seq6_DGN/gdn_1.h5*
 - model 4Seq6-DGN (ablation): *./trained_model/4Seq6_DGN/gdn_1.h5*
 
+## Use of code
 
+### One scenario testing
+
+In order to a perform a test using only 1 scenario (whichever of the provided) and the model of your preference, you should execute the following command:
+
+```python runexp.py --DGN_model_path=<model_path> --evaluation=True --with_RoC_term_reward=True --scenario=<scenario_ID> ```
+<br />
+where ```<model_path>``` should be replaced by one of the paths referred above (e.g, *./trained_model/All36/gdn_1.h5*, which is the best model!),
+and ```<scenario_ID>``` should be replaced by one of the scenario IDs reported in the file: <br />
+*./selected_scenarios_files/selected_scenarios_for_testing.txt* . <br /> 
+If the selected model path corresponds to a model of the ablation study (All36-DGN, 6Seq6-DGN, 4Seq6-DGN) you should also use the argument ```--conc_observations_edges=True```.
+
+When run is complete, the following files should be created in current directory:
+
+- *episodes_log.txt* which will include information about the *mean reward*, *number of alerts*, *number of ATC instructions*, and *total additional NM*.
+- *./logs/solved_confl_and_further_info.txt* which will include information about the *number of conflicts*, *number of LoSs*, *number of conflicts in groups solved*, 
+  *total conflict resolution duration*. Note that in our paper, the *percentage of Conflicts Resolved* is computed based on the *number of conflicts in groups solved*   since *number of conflicts solved* is misleading (each conflict is considered unresolved if there is another conflict for the same pair of conflicting flights in a
+  subsequent timestamp, while we consider a conflict unresolved only if there is a LoS for the same pair of conflicting flights in a subsequent timestamp).
+- *./logs/resolution_actions_episode_1* which will include details about the suggested resolution actions.
+- other files in the *./logs* folder as well as the directories *./log* and *./heatmaps_by_agent* with more details.
