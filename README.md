@@ -111,3 +111,41 @@ When run is complete, the following files should be created in current directory
   subsequent timestamp, while we consider a conflict unresolved only if there is a LoS for the same pair of conflicting flights in a subsequent timestamp).
 - *./logs/resolution_actions_episode_1* which will include details about the suggested resolution actions.
 - other files in the *./logs* folder as well as the directories *./log* and *./heatmaps_by_agent* with more details.
+
+### Multiple scenarios testing
+
+To run tests with more than one scenario, you should execute the following command:
+
+- ```python run_multiple_tests.py --DGN_model_path=<model_path>```
+
+where by default:
+
+- *micro* average results are calculated. You have the following choices for calculating *macro* average results:
+  - use the argument ```--with_mean_and_std=True``` to compute the *mean* and *std* of the macro average results.
+  - use the argument ```--with_median_instead_of_mean=True``` along with ```--with_mean_and_std=True``` to compute the *median* and *std* of the macro average results.
+  - use the argument ```--with_iqr_instead_of_std``` along with ```--with_mean_and_std=True``` and ```--with_median_instead_of_mean=True``` to compute the *median* 
+    and *iqr* (Interquantile Range) of the macro average results.
+
+- the file *./selected_scenarios_files/selected_scenarios_for_testing.txt* is loaded to determine the scenarios to be used for testing. <br />
+  Note that the argument ```--file_path_selected_scenarios_for_testing``` controls the path of this file, and       
+  ```--num_of_the_last_scenarios_only_for_testing``` controls the number of testing scenarios. This file should include at least 1 training scenario at the top and
+  then the testing scenarios should be listed.
+
+- the file *./selected_scenarios_files/selected_scenarios_of_training_for_testing.txt* is loaded to determine the scenarios used for training and which are going to be
+  used for testing as well (since the results are separated into train-and-test and test-only). <br />
+  Note that the argument ```--file_path_selected_scenarios_of_training_for_testing``` controls the path of this file. Also, note that this file should include at least 
+  1 scenario which should also be included in the file *./selected_scenarios_files/selected_scenarios_for_testing.txt*.
+
+- the file *./selected_scenarios_files/selected_scenarios_details.csv* is loaded to determine the details (like the *number of conflicts*, *number of alerts*, etc) of 
+  the scenarios used for testing (specifically, the details of the scenarios without applying any resolution action in order to compared them with the
+  corresponding details after applying the resolution actions proposed by the selected model).
+  
+NOTE: If you want to run the test using a model of the ablation study, you should use the argument ```--conc_observations_edges=True``` . 
+
+When run is complete, a folder named *testing* should be created in the current directory, which should include:
+
+- A folder for each of the testing scenarios named *scenario=<scenario_ID>*, which will contain the corresponding files as described in [One scenario testing](#one-scenario-testing).
+
+- A file named *testing_dataframe.csv* which includes the statistics (like the *Increase/Decrease of alerts*, *Increase/Decrease of LoS*, etc) reported in our paper.
+  It should be noted again that *percentage of Conflicts Resolved* reported in the paper is computed based on the *Number of conflicts in groups solved*, 
+  as well as *Resolution Action Duration* corresponds to *Conflict (in groups) resolution duration*.
