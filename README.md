@@ -33,4 +33,34 @@ This repository consists of:
 
 * Trained models.
 
+## Code dependencies
+
+To run the code (for testing or training), you need the followings:
+
+1. Ubuntu 18.04, or 20.04, or 22.04,
+2. Conda environment with *python 3.6*. You can execute the commands below to install conda and create the required conda virtual environment:
+   - ```mkdir tmp```
+   - ```cd tmp```
+   - ```curl https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh --output anaconda.sh```
+   - ```sha256sum anaconda.sh```
+   - ```bash anaconda.sh```
+   - ```source ~/.bashrc```
+   - ```conda install python=3.6```
+   - ```conda create --name conda_env python=3.6```
+   - ```conda activate conda_env```
+3. After having install and activate the conda environment, you should install the requirements using the following commands:
+   - ```conda install pandas=1.1.5```
+   - ```conda install numba=0.50```
+   - ```conda install pyproj=2.6.1.post1```
+   - ```conda install cython=0.29.24```
+   - ```pip install geo-py==0.4```
+   - ```conda install shapely=1.7.1```
+   - ```conda install matplotlib=3.1.1```
+   - ```conda install scipy=1.5```
+   - ```conda install pymongo=3.12.0```
+   - ```conda install tensorflow-gpu=1.14```
+   - ```pip install Keras==2.1.2```
+   - ```conda install h5py=2.10.0```
+   - ```conda install numpy==1.19.2```
+   - ```conda install psutil==5.8.0```
 
