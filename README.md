@@ -195,3 +195,24 @@ where by default the file *./selected_scenarios_files/selected_scenarios_for_tes
 
 After run is complete, the file *scenarios_details.csv* should be created in the current directory.
 
+### Training
+
+The hyperparameters of the enhanced DGN can be controlled through the file *./enhanced_DGN/DGN_config.py* .
+
+#### Train with only 1 scenario
+
+To train a model using samples from a specific scenario, you should execute the following command:
+
+```python runexp.py --scenario=<scenario_ID>```
+
+Furthermore, you can control the following hyperparameters using only arguments (NOT through the file *./enhanced_DGN/DGN_config.py*):
+
+- batch size, argument: ```--batch_size=<integer_number>```
+- learning rate, argument: ```--LRA=<float_number>```
+- total number of training episodes (exploration + exploitation), argument: ```--train_episodes=<integer_number>```
+- total number of exploration episodes (it should be lower than the total number of training episodes),                                                                 
+  argument: ```--exploration_episodes=<integer_number>```
+- specify if want to use priorized replay buffer, argument: ```--prioritized_replay_buffer=<True_or_False>```
+- specify if want to use the *Rate of Closure* in the reward function, argument: ```--with_RoC_term_reward=<True_or_False>```
+
+After training is finished, the trained model will be stored in a file named *gdn.h5* in the current directory. Also, a file named *episodes_log.txt* will be created in the same directory, which will contain details about the progress of training and can be used to plot the learning curves.
