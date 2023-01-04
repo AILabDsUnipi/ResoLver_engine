@@ -21,16 +21,13 @@ if __name__ == '__main__':
     parser.add_argument("--file_path_selected_scenarios_for_testing", type=str, default="./selected_scenarios_files/")
     parser.add_argument("--file_path_selected_scenarios_of_training_for_testing", type=str, default="./selected_scenarios_files/")
     parser.add_argument("--file_path_selected_scenarios_details", type=str, default="./selected_scenarios_files/")
+    parser.add_argument("--model_path", type=str, default="./")
     # In the above number we should include any possible duplicate scenario
     parser.add_argument("--num_of_the_last_scenarios_only_for_testing", type=int, default=24)
-    parser.add_argument("--dynamic_edges", type=bool, default=False)
     parser.add_argument("--conc_observations_edges", type=bool, default=False)
-    parser.add_argument("--with_neighbors_without_conflict", type=bool, default=False)
     parser.add_argument("--with_mean_and_std", type=bool, default=False)
     parser.add_argument("--with_median_instead_of_mean", type=bool, default=False)
     parser.add_argument("--with_iqr_instead_of_std", type=bool, default=False)
-    parser.add_argument("--assign_zero_action_randomly", type=bool, default=False)
-    parser.add_argument("--randomness_percentage_for_assigning_zero_action", type=int, default=25)
     parser.add_argument("--boxplots", type=bool, default=False)
     parser.add_argument("--boxplots_font_size", type=int, default=15)
     parser.add_argument("--boxplots_linewidth", type=float, default=1.5)
@@ -44,15 +41,12 @@ if __name__ == '__main__':
     file_path_selected_scenarios_for_testing = tt.file_path_selected_scenarios_for_testing
     file_path_selected_scenarios_of_training_for_testing = tt.file_path_selected_scenarios_of_training_for_testing
     file_path_selected_scenarios_details = tt.file_path_selected_scenarios_details
+    model_path = tt.model_path
     num_of_the_last_scenarios_only_for_testing = tt.num_of_the_last_scenarios_only_for_testing
-    dynamic_edges = tt.dynamic_edges
     conc_observations_edges = tt.conc_observations_edges
-    with_neighbors_without_conflict = tt.with_neighbors_without_conflict
     with_mean_and_std = tt.with_mean_and_std
     with_median_instead_of_mean = tt.with_median_instead_of_mean
     with_iqr_instead_of_std = tt.with_iqr_instead_of_std
-    assign_zero_action_randomly = tt.assign_zero_action_randomly
-    randomness_percentage_for_assigning_zero_action = tt.randomness_percentage_for_assigning_zero_action
     boxplots = tt.boxplots
     boxplots_font_size = tt.boxplots_font_size
     boxplots_linewidth = tt.boxplots_linewidth
@@ -60,10 +54,6 @@ if __name__ == '__main__':
     boxplots_outlier_markers_size = tt.boxplots_mean_markers_size
     boxplots_title = tt.boxplots_title
     save_data_for_boxplots = tt.save_data_for_boxplots
-
-    if dynamic_edges and conc_observations_edges:
-        print("\n You should choose either 'dynamic_edges' or 'conc_observations_edges' but not both of them!!!")
-        exit(0)
 
     if with_median_instead_of_mean and not with_mean_and_std:
         print("\n You should set the flag 'with_mean_and_std' to True when 'with_median_instead_of_mean' is selected to be True!!!")
@@ -137,13 +127,9 @@ if __name__ == '__main__':
                                                       '/logs/solved_confl_and_further_info.txt', 'r')
         else:
             print("\n \n Scenario: {}, number: {}".format(current_scenario, idx+1))
-            os.system("python runexp.py --DGN_model_path='.' --evaluation=True --with_RoC_term_reward=True --scenario=" +
-                      current_scenario +
-                      (' --dynamic_edges=True' if dynamic_edges else ('' if not conc_observations_edges else
-                                                                      ' --conc_observations_edges=True')) +
-                      (' --with_neighbors_without_conflict=True' if with_neighbors_without_conflict else '') +
-                      ((' --assign_zero_action_randomly=True --randomness_percentage_for_assigning_zero_action=' +
-                       str(randomness_percentage_for_assigning_zero_action)) if assign_zero_action_randomly else ''))
+            os.system("python runexp.py --DGN_model_path=" + model_path +
+                      " --evaluation=True --with_RoC_term_reward=True --scenario=" +
+                      current_scenario + ('' if not conc_observations_edges else ' --conc_observations_edges=True'))
 
             episodes_log_file = open('episodes_log.txt', 'r')
             solved_confl_and_further_info_file = open('./logs/solved_confl_and_further_info.txt', 'r')

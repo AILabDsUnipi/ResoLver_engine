@@ -121,7 +121,8 @@ class CDR(object):
                  with_RoC_term_reward_,
                  with_slack_notifications_,
                  send_slack_notifications_every_episode_,
-                 conc_observations_edges_):
+                 conc_observations_edges_,
+                 selected_scenarios_path_):
 
         # Evaluation specifications
         self.evaluation = evaluation_
@@ -179,7 +180,7 @@ class CDR(object):
         self.scenario = scenario_
 
         if self.multi_scenario_training and not self.evaluation:
-            f_selected_scenarios = open('selected_scenarios.txt', 'r')
+            f_selected_scenarios = open(selected_scenarios_path_ + 'selected_scenarios.txt', 'r')
             lines = f_selected_scenarios.readlines()
             self.scenario_list = [line.split('\n')[0] for line in lines]
             print("Scenario list: {}".format(self.scenario_list))
@@ -5640,7 +5641,7 @@ if __name__ == '__main__':
     np.random.seed(16)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--DGN_model_path", type=str, default="./../results/without_reg/training/1st exp")
+    parser.add_argument("--DGN_model_path", type=str, default="./")
     parser.add_argument("--evaluation", type=bool, default=False)
     parser.add_argument("--batch_size", type=int, default=10)
     parser.add_argument("--LRA", type=float, default=0.0001)
@@ -5656,6 +5657,7 @@ if __name__ == '__main__':
     parser.add_argument("--with_slack_notifications", type=bool, default=False)
     parser.add_argument("--send_slack_notifications_every_episode", type=int, default=500)
     parser.add_argument("--conc_observations_edges", type=bool, default=False)
+    parser.add_argument("--selected_scenarios_path", type=str, default="./")
 
     tt = parser.parse_args()
 
@@ -5669,7 +5671,7 @@ if __name__ == '__main__':
     conc_observations_edges = tt.conc_observations_edges
 
     # Training specifications
-    DGN_model_path = tt.DGN_model_path
+    selected_scenarios_path = tt.selected_scenarios_path
     continue_train = tt.continue_train
     with_slack_notifications = tt.with_slack_notifications
     send_slack_notifications_every_episode = tt.send_slack_notifications_every_episode
@@ -5681,6 +5683,9 @@ if __name__ == '__main__':
     scenario = tt.scenario
     multi_scenario_training = tt.multi_scenario_training
     with_RoC_term_reward = tt.with_RoC_term_reward
+
+    # Model to be used
+    DGN_model_path = tt.DGN_model_path
 
     conflict_detection_and_resolution = \
         CDR(DGN_model_path,
@@ -5697,7 +5702,8 @@ if __name__ == '__main__':
             with_RoC_term_reward,
             with_slack_notifications,
             send_slack_notifications_every_episode,
-            conc_observations_edges)
+            conc_observations_edges,
+            selected_scenarios_path)
 
     conflict_detection_and_resolution.run_CDR()
 

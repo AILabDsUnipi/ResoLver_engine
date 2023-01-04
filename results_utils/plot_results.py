@@ -183,7 +183,7 @@ if __name__ == '__main__':
     ATC_instruction_plot = True #Set this value according to whether you want to plot the number of ATC instruction in each training episode
     loss_plot = True #Set this value according to whether you want to plot the loss of each training episode
     additional_NM_plot = True #Set this value according to whether you want to plot the additional NM of each training episode
-    conflicts_not_alerts_with_positive_tcpa_plot = True #Set this value according to whether you want to plot the conflicts (not alerts) with pocitive tcpa of each training episode
+    conflicts_not_alerts_with_positive_tcpa_plot = True #Set this value according to whether you want to plot the conflicts (not alerts) with positive tcpa of each training episode
     #table_results = False ##Set this value according to whether you want to create the table results for evaluation
 
     save_plot = True #Set this value to true if you want to save the plots, or False otherwise. Note that the plots will be saved in the same directory as this script
@@ -202,8 +202,8 @@ if __name__ == '__main__':
     # Set these paths according to where your experiments results are located.
     # In the provided directory, the experiments should be ordered as: '1st exp', '2nd exp', '3rd exp' etc,
     # and the results should be named in each experiment folder as: 'episodes_log_1.txt', 'episodes_log_2.txt', 'episodes_log_3.txt' etc.
-    file_path_list = ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/4th_alt_1/batch_size=256/r_norm=20/drift_alt_norm=6.15/lr=0.00001/with_ROC/with_prior_buffer/without_reg/training']
-    labels_list = ['4Seq6Alt']
+    file_path_list = ['./training']
+    labels_list = ['Label']
     data_dict = {'rewards': [], 'losses_of_separation': [], 'alerts': [], 'episodes_length': [], 'ATC_instruction': [], 'loss': [], 'additional_NM': [], 'conflicts_not_alerts': []}
     for file in file_path_list:
         data_dict['rewards'].append(get_rewards(file, used_exp))

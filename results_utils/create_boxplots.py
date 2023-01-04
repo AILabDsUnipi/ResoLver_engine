@@ -111,35 +111,35 @@ if __name__ == '__main__':
 
     nested_lists_model_names_lists_paths_dataLabels_data = [
         ['All36', [
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_add_NMs.pkl', 'RA'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_mean_reward.pkl', 'RW']
+            ['........./df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
+            ['........./df_for_boxplots_add_NMs.pkl', 'RA'],
+            ['........./df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
+            ['........./df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
+            ['........./df_for_boxplots_mean_reward.pkl', 'RW']
                  ]
          ],
         ['6Seq6', [
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/6th/testing/testing_scenarios_4/df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/6th/testing/testing_scenarios_4/df_for_boxplots_add_NMs.pkl', 'RA'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/6th/testing/testing_scenarios_4/df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/6th/testing/testing_scenarios_4/df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario/6th/testing/testing_scenarios_4/df_for_boxplots_mean_reward.pkl', 'RW']
+            ['........./df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
+            ['........./df_for_boxplots_add_NMs.pkl', 'RA'],
+            ['........./df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
+            ['........./df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
+            ['........./df_for_boxplots_mean_reward.pkl', 'RW']
                 ]
          ],
-        ['All36+SE', [
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_add_NMs.pkl', 'RA'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/36_scenarios/testing/testing_scenarios_2/df_for_boxplots_mean_reward.pkl', 'RW']
+        ['All36-DGN', [
+            ['........./df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
+            ['........./df_for_boxplots_add_NMs.pkl', 'RA'],
+            ['........./df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
+            ['........./df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
+            ['........./df_for_boxplots_mean_reward.pkl', 'RW']
                     ]
          ],
-        ['6Seq6+SE', [
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/6th/testing/testing_scenarios_2/df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/6th/testing/testing_scenarios_2/df_for_boxplots_add_NMs.pkl', 'RA'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/6th/testing/testing_scenarios_2/df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/6th/testing/testing_scenarios_2/df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
-            ['/home/georgepap/PycharmProjects/DGN_project/TAPAS_implementation/v_1.7/TAPAS_environment_final/testing_results/multiscenario_SSE/6th/testing/testing_scenarios_2/df_for_boxplots_mean_reward.pkl', 'RW']
+        ['6Seq6-DGN', [
+            ['........./df_for_boxplots_1.pkl', 'CR_IncrDecrConflicts_IncrDecrAlerts'],
+            ['........./df_for_boxplots_add_NMs.pkl', 'RA'],
+            ['........./df_for_boxplots_ATC_instructions.pkl', 'ANMs'],
+            ['........./df_for_boxplots_conflict_in_groups_resolution_duration.pkl', 'RAD'],
+            ['........./df_for_boxplots_mean_reward.pkl', 'RW']
                     ]
          ],
     ]
