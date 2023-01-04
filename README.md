@@ -234,3 +234,17 @@ You can train a model in a sequential fashion, as we did in the cases of 4Seq6 a
 - ```--continue_train=True```
 - ```--DGN_model_path=<path_to_trained_model>``` . NOTE: The name of the trained model should be different from *gdn.h5* (such as *gdn_1.h5*).
 
+#### Plot learning curves
+
+After training a model you can plot the learning curves by performing the following steps:
+
+- create a folder named *training* inside the folder *results_utils*.
+- create a folder named *1st exp* inside the folder *training*.
+- move the generated file *episodes_log.txt* in the folder *1st exp*.
+- rename the *episodes_log.txt* file to *episodes_log_1.txt*.
+- run the command ```python plot_results.py```.
+
+NOTE: The file *plot_results.py* is located in the folder *results_utils*. To run the above command you need to create a different conda environment with python version >= 3.7, numpy version >= 1.21.5, and matplotlib version >= 3.5.1 .
+
+## Citation
+``` . ```
