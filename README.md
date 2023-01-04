@@ -149,3 +149,16 @@ When run is complete, a folder named *testing* should be created in the current 
 - A file named *testing_dataframe.csv* which includes the statistics (like the *Increase/Decrease of alerts*, *Increase/Decrease of LoS*, etc) reported in our paper.
   It should be noted again that *percentage of Conflicts Resolved* reported in the paper is computed based on the *Number of conflicts in groups solved*, 
   as well as *Resolution Action Duration* corresponds to *Conflict (in groups) resolution duration*.
+  
+#### Statistics table
+In order to summarize the statistics of the different models (after running *run_multiple_tests.py* for the 6 models), you can create a table of statistics by running
+the file *construct_statistics_table.py* located in the folder *results_utils* using the following command:
+
+```python construct_statistics_table.py```
+
+NOTE: Before running the above command, you should change the paths according to the location of each file *testing_dataframe.csv* (one for each model). Specifically, you should change the paths in lines 15-20 of *construct_statistics_table.py* file.
+
+When run is complete, a file named *statistics_table.xlsx* should be created in the current directory. 
+
+If the statistics to be summarized include *std* or *iqr*, you can use the argument ```--with_mean_median_and_std_iqr=True``` to adjust the length of the cells of the .xlsx file.
+
