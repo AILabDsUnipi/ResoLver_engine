@@ -1,3 +1,10 @@
+"""
+AILabDsUnipi/CDR_DGN Copyright (C) 2022 AI-Lab Dept. of Digital Systems, University of Piraeus
+
+This source code is licensed under the GPL-3.0 license found in the
+LICENSE.md file in the root directory of this source tree.
+"""
+
 from env.environment.env_config import env_config
 import numpy as np
 

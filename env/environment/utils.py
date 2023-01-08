@@ -1,3 +1,10 @@
+"""
+AILabDsUnipi/CDR_DGN Copyright (C) 2022 AI-Lab Dept. of Digital Systems, University of Piraeus
+
+This source code is licensed under the GPL-3.0 license found in the
+LICENSE.md file in the root directory of this source tree.
+"""
+
 from numba import njit, prange, jit
 from pyproj import Transformer
 from math import cos, sin, radians, degrees, sqrt, floor, ceil
@@ -8,15 +15,10 @@ import pandas as pd
 from shapely.geometry import Point, LineString, Polygon
 from shapely.ops import transform
 
-# import geometry_utils
-# from env_config import env_config
-# import flight_plan_utils
-
 import os
 import sys
 import inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-#parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, currentdir)
 import geometry_utils
 from env_config import env_config

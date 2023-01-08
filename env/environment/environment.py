@@ -1,3 +1,10 @@
+"""
+AILabDsUnipi/CDR_DGN Copyright (C) 2022 AI-Lab Dept. of Digital Systems, University of Piraeus
+
+This source code is licensed under the GPL-3.0 license found in the
+LICENSE.md file in the root directory of this source tree.
+"""
+
 import pandas as pd
 from datetime import datetime, timezone
 from math import ceil, floor
@@ -11,24 +18,15 @@ from pathlib import Path
 import copy
 from math import sin, cos, radians, degrees
 
-# from env_config import env_config
-# import flight_utils as flight_utils
-# import utils
-# import flight_plan_utils
-# import sector_utils
-
 import sys
 import inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-#parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, currentdir)
 from env_config import env_config
 import flight_utils as flight_utils
 import utils
 import flight_plan_utils
 import sector_utils
-
-# 26551,30987,32636,33958,37596
 
 class Environment(object):
     """

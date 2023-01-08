@@ -1,18 +1,6 @@
 # CDR_DGN
 
-This repository constitutes the implementation (code and dataset) of our paper:                                                                                        
-*Deep Reinforcement Learning in service of Air Traffic Controllers to resolve tactical conflicts*
-
-This repository is publicly available under a *GPL-3.0 licence* found in the *LICENSE.md* file in the root directory of this source tree.                              
-
-All data contained in this publicly available repository is under a *CC BY-NC-ND 4.0 licence* found in the *data_LICENSE.md* file in the root directory of this source tree. As data we consider the followings:
-- all files included in the folders: *./env/SectorGeom*, *./env/fplans*, *./env/training_data*, *./env/environment/bins_median_dict.pickle*, 
-  *./env/environment/dangles_dspeeds_dict.txt*, *./env/environment/mbr_spain_2.csv*, *./env/environment/sectors_over_spain.csv*, 
-  *./env/environment/dependencies/bins_median_dict.pickle*, *./env/environment/states_out_0.csv*, *./env/environment/states_out_1.csv*, 
-  *./env/environment/exit_wp_0.csv*, and *./env/environment/exit_wp_1.csv* 
-- all files included in the folders: *./trained_model*, and *./selected_scenarios_files*                                                                               
-
-NOTE: as *./* we consider the root directory of this repository.
+This repository constitutes the implementation (code and dataset) of our paper: *Deep Reinforcement Learning in service of Air Traffic Controllers to resolve tactical conflicts*
 
 ## Contents
 

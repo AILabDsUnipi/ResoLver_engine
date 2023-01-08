@@ -1,11 +1,15 @@
-# import utils as env_utils
+"""
+AILabDsUnipi/CDR_DGN Copyright (C) 2022 AI-Lab Dept. of Digital Systems, University of Piraeus
+
+This source code is licensed under the GPL-3.0 license found in the
+LICENSE.md file in the root directory of this source tree.
+"""
+
 import numpy as np
 import pandas as pd
 import copy
 from numba import njit
 from math import sqrt
-
-# from utils import mybearing, utils_global
 
 import os
 import sys
