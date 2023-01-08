@@ -10,7 +10,7 @@ All data contained in this publicly available repository is under a *CC BY-NC-ND
   *./env/environment/dangles_dspeeds_dict.txt*, *./env/environment/mbr_spain_2.csv*, *./env/environment/sectors_over_spain.csv*, 
   *./env/environment/dependencies/bins_median_dict.pickle*, *./env/environment/states_out_0.csv*, *./env/environment/states_out_1.csv*, 
   *./env/environment/exit_wp_0.csv*, and *./env/environment/exit_wp_1.csv* 
-- all files included in the folders: *./trained_model*, and *./selected_scenarios_files* 
+- all files included in the folders: *./trained_model*, and *./selected_scenarios_files*                                                                               
 NOTE: as *./* we consider the root directory of this repository.
 
 ## Contents
