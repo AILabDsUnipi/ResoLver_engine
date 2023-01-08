@@ -3,8 +3,8 @@
 This repository constitutes the implementation (code and dataset) of our paper:                                                                                        
 *Deep Reinforcement Learning in service of Air Traffic Controllers to resolve tactical conflicts*
 
-This repository is publicly available under a GPL-3.0 licence found in the LICENSE.md file in the root directory of this source tree.
-All data contained in this publicly available repository is under a CC BY-NC-ND 4.0 licence found in the data_LICENSE.md file in the root directory of this source tree.
+This repository is publicly available under a *GPL-3.0 licence* found in the *LICENSE.md* file in the root directory of this source tree.                              
+All data contained in this publicly available repository is under a *CC BY-NC-ND 4.0 licence* found in the *data_LICENSE.md* file in the root directory of this source tree.
 
 ## Contents
 
