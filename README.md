@@ -78,7 +78,7 @@ To run the code (for testing or training), you need the followings:
    - ```conda install numpy==1.19.2```
    - ```conda install psutil==5.8.0```
 
-<p align="right">(<a href="#resover_engine">back to top</a>)</p>
+<p align="right">(<a href="#resolver_engine">back to top</a>)</p>
 
 ## Real World Dataset
 
