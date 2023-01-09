@@ -1,5 +1,5 @@
 """
-AILabDsUnipi/CDR_DGN Copyright (C) 2022 AI-Lab Dept. of Digital Systems, University of Piraeus
+AILabDsUnipi/ResoLver_engine Copyright (C) 2022 AI-Lab Dept. of Digital Systems, University of Piraeus
 
 This source code is licensed under the GPL-3.0 license found in the
 LICENSE.md file in the root directory of this source tree.
@@ -617,9 +617,11 @@ class CDR(object):
 
     @staticmethod
     def send_slack_message(message_):
+
+        #Find instructions on how to create your Webhook URL here: https://api.slack.com/messaging/webhooks
         text_var_ = '"text"'
         os.system("curl -X POST -H 'Content-type: application/json' --data '{" + text_var_ + ":" + message_ + "}' " +
-                  "https://hooks.slack.com/services/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")
+                  "https://hooks.slack.com/services/<your_Webhook_URL>")
 
     def flight_ids_to_one_hot(self):
         flights_idxs = np.arange(0, self.n_agent)
