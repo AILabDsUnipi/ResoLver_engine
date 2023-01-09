@@ -1,4 +1,4 @@
-# CDR_DGN
+# ResoLver_engine
 
 This repository constitutes the implementation (code and dataset) of our paper:                                                                                        
 *Deep Reinforcement Learning in service of Air Traffic Controllers to resolve tactical conflicts*
