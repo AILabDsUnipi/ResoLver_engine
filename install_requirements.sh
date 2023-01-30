@@ -2,6 +2,7 @@
 
 conda install -y python=3.6
 conda create -y --name DGN_conda_env python=3.6
+conda activate DGN_conda_env
 conda install -y pandas=1.1.5
 conda install -y numba=0.50
 conda install -y pyproj=2.6.1.post1
