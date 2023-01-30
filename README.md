@@ -58,10 +58,12 @@ To run the code (for testing or training), you need the followings:
 Assuming that you have already installed Ubuntu (find information [here](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), 
 you can execute the following command to *(a)* get this repository, *(b)* install the suitable version of anaconda, *(c)* create and activate a 
 conda virtual environment, and *(d)* install requirements:
+
 ```git clone https://github.com/AILabDsUnipi/ResoLver_engine && cd ./ResoLver_engine && bash install_anaconda.sh && source anaconda3/bin/activate && conda install -y python=3.6 && conda create -y --name DGN_conda_env python=3.6 && conda activate DGN_conda_env && bash install_requirements.sh```
 
 NOTE: If have already installed the above, you have closed the terminal or you have deactivated conda environment, and you need to run again the code, 
 you should activate again conda environment by running the following command (assuming you are in the *~/ResoLver_engine* directory):
+
 ```source anaconda3/bin/activate && conda activate DGN_conda_env```
 
 <p align="right">(<a href="#resolver_engine">back to top</a>)</p>
