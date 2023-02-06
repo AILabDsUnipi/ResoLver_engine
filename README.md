@@ -55,7 +55,7 @@ To run the code (for testing or training), you need the followings:
 2. Conda environment with *python 3.6*,
 3. To install the requirements.
     
-Assuming that you have already installed Ubuntu (find information [here](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview), 
+Assuming that you have already installed Ubuntu (find information [here](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)), 
 you can execute the following command to *(a)* get this repository, *(b)* install the suitable version of anaconda, *(c)* create and activate a 
 conda virtual environment, and *(d)* install requirements:
 
