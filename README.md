@@ -272,7 +272,8 @@ NOTE: The file *plot_results.py* is located in the folder *results_utils*. To ru
 <p align="right">(<a href="#resolver_engine">back to top</a>)</p>
 
 ## Citation
-``` @article{PAPADOPOULOS2024121234,
+```
+@article{PAPADOPOULOS2024121234,
 title = {Deep reinforcement learning in service of air traffic controllers to resolve tactical conflicts},
 journal = {Expert Systems with Applications},
 volume = {236},
@@ -282,4 +283,5 @@ issn = {0957-4174},
 doi = {https://doi.org/10.1016/j.eswa.2023.121234},
 url = {https://www.sciencedirect.com/science/article/pii/S0957417423017360},
 author = {George Papadopoulos and Alevizos Bastas and George A. Vouros and Ian Crook and Natalia Andrienko and Gennady Andrienko and Jose Manuel Cordero},
-} ```
+}
+```
