@@ -2,9 +2,7 @@
 
 This repository constitutes the implementation (code and dataset) of our paper: 
 
-G. Papadopoulos, A. Bastas, G. A. Vouros, I. Crook, N. Andrienko, G. Andrienko and J. M. Cordero, "Deep reinforcement learning in service of air traffic controllers to resolve tactical conflicts," *Expert Systems with Applications*, vol. 236, p. 121234, 2024.
-
-[Link](https://authors.elsevier.com/c/1hj1O3PiGTPfMG)
+G. Papadopoulos, A. Bastas, G. A. Vouros, I. Crook, N. Andrienko, G. Andrienko and J. M. Cordero, "Deep reinforcement learning in service of air traffic controllers to resolve tactical conflicts," *Expert Systems with Applications*, vol. 236, p. 121234, 2024. [Link](https://authors.elsevier.com/c/1hj1O3PiGTPfMG)
 
 This repository is publicly available under a *GPL-3.0 licence* found in the *LICENSE.md* file in the root directory of this source tree.                              
 
